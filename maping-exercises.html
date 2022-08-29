@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        function doubleNumbers (arr) {
+    var doubled = [];
+    for (var i = 0; i < arr.length; i++) {
+        doubled.push(arr[i] * 2);
+    }
+    return doubled;
+}
+console.log(doubleNumbers([2, 5, 100]));
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+var arr = [2, 5, 100];
+var sphValues = arr.map(function(e){return e.toString()});
+console.log(sphValues); 
+
+
+const capitalizeNames = ["john", "JACOB", "jinGleHeimer", "schmidt"];
+
+for (let Names of capitalizeNames) {
+    Names = Names.charAt(0).toUpperCase() + Names.substr(1);
+    console.log(Names);
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function namesOnly(arr) {
+  return arr.map(i => i.name);
+}
+var res = namesOnly([
+  {
+    name: "Angelina Jolie",
+    age: 80
+  },
+  {
+    name: "Eric Jones",
+    age: 2
+  },
+  {
+    name: "Paris Hilton",
+    age: 5
+  },
+  {
+    name: "Kayne West",
+    age: 16
+  },
+  {
+    name: "Bob Ziroll",
+    age: 100
+  }
+])
+console.log(res);
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+function readyToPutInTheDOM(arr) {
+  return arr.map(function(obj) {
+    return "<h1>" +obj.name +"</h1>" + "<h2>" + obj.age +"</h2>";
+  });
+}
+
+var result = readyToPutInTheDOM([{name:"Angelina Jolie",age:80},{name:"Eric Jones",age:2},{name:"Paris Hilton",age:5},{name:"Kayne West",age:16},{name:"Bob Ziroll",age:100}]);
+console.log(result);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function extractFullName(arr){
+  return arr.map(function(val, i, arr) {
+    return val.first + ' ' + val.last;
+    });
+}
+console.log(extractFullName([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia"}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele"}]));
+
+
+    </script>
+</body>
+</html>

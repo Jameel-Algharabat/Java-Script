@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+    <style>
+        #mydiv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+           
+        }
+    </style>
+
+</head>
+<body>
+<div id="mydiv"></div>
+
+<script>
+    var color = [ "#3C9EE7", "#E7993C","#E73C99", "#3CE746", "#E7993C"];
+  
+    document.querySelector("div").addEventListener("mouseover", function () {
+        document.querySelector("div").style.background 
+            = color[Math.floor(Math.random() * color.length)];
+    })
+</script>
+</body>
+</html>
